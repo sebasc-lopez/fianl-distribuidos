@@ -5,7 +5,7 @@ import time
 import bcrypt
 from threading import Thread
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates/')
 app.secret_key="appLogin"
 #app.config['SECRET_KEY'] = 'secret'
 app.config['MYSQL_HOST'] = 'localhost'
