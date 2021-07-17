@@ -8,10 +8,10 @@ from threading import Thread
 app = Flask(__name__, template_folder='Templates/')
 app.secret_key="appLogin"
 #app.config['SECRET_KEY'] = 'secret'
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'chatusers'
+app.config['MYSQL_HOST'] = 'us-cdbr-east-04.cleardb.com'
+app.config['MYSQL_USER'] = 'ba7dac01c0008d'
+app.config['MYSQL_PASSWORD'] = '8c4d9f42'
+app.config['MYSQL_DB'] = 'heroku_daaa8b49d1664fa'
 
 mysql = MySQL(app)
 
