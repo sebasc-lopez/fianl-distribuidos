@@ -66,15 +66,6 @@
     <ul id='test'></ul>
     <script type="text/javascript" src="http://[serverip]:3000/socket.io/socket.io.js"></script>
     <script>
-        const io = require('socket.io')(server, {
-            cors: {
-                origin: "http://localhost:8100",
-                methods: ["GET", "POST"],
-                transports: ['websocket', 'polling'],
-                credentials: true
-            },
-            allowEIO3: true
-        });
         const usuario = document.getElementById('buttonsend');
         var hoy = new Date();
         console.log(hoy.getHours())
