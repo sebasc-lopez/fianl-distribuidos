@@ -64,12 +64,11 @@
     <input type="text" id="myMessage">
     <button type="button" id="send">Button</button>
     <ul id='test'></ul>
-    <script type="text/javascript" src="http://[serverip]:3000/socket.io/socket.io.js"></script>
     <script>
         const usuario = document.getElementById('buttonsend');
         var hoy = new Date();
         console.log(hoy.getHours())
-        const socket = io('http://[serverip]:3000');
+        const socket = io();
         var salaCtual = "12345general12345"
         var salaFinal = "12345general12345"
         var memoMensaje = ""
