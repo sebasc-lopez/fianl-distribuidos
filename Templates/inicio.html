@@ -12,7 +12,7 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" charset="utf-8"></script>-->
 
 
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
 
     <style type="text/css">
         body {
@@ -71,7 +71,8 @@
         const usuario = document.getElementById('buttonsend');
         var hoy = new Date();
         console.log(hoy.getHours())
-        const socket = io();
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        //const socket = io();
         socket.on('connect', function() {
             socket.emit('my event', {
                 data: 'I\'m connected!'
