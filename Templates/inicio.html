@@ -71,7 +71,7 @@
         const usuario = document.getElementById('buttonsend');
         var hoy = new Date();
         console.log(hoy.getHours())
-        const socket = io.connect('https://final-distribuidos.herokuapp.com/');
+        const socket = io('https://final-distribuidos.herokuapp.com/');
         var salaCtual = "12345general12345"
         var salaFinal = "12345general12345"
         var memoMensaje = ""
