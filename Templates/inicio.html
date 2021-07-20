@@ -72,7 +72,7 @@
         var hoy = new Date();
         console.log(hoy.getHours())
         var socket = io.connect('http://' + document.domain + ':' + location.port);
-        //const socket = io();
+        //const socket = io();dfd
         socket.on('connect', function() {
             socket.emit('my event', {
                 data: 'I\'m connected!'
