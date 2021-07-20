@@ -71,7 +71,12 @@
         const usuario = document.getElementById('buttonsend');
         var hoy = new Date();
         console.log(hoy.getHours())
-        const socket = io('https://final-distribuidos.herokuapp.com/socket.io/?EIO=3&transport=polling&t=1429923179530-0');
+        const socket = io();
+        socket.on('connect', function() {
+            socket.emit('my event', {
+                data: 'I\'m connected!'
+            });
+        });
         var salaCtual = "12345general12345"
         var salaFinal = "12345general12345"
         var memoMensaje = ""
