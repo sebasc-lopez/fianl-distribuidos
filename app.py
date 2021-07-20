@@ -17,7 +17,7 @@ mysql = MySQL(app)
 
 semilla = bcrypt.gensalt()
 
-socketio = SocketIO(app, logger=True, engineio_logger=True, always_connect=True)
+socketio = SocketIO(app)
 thread = None
 
 users = []
