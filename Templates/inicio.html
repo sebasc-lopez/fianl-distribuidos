@@ -70,7 +70,7 @@
         const usuario = document.getElementById('buttonsend');
         var hoy = new Date();
         console.log(hoy.getHours())
-        const socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
+        const socket = io();
         var salaCtual = "12345general12345"
         var salaFinal = "12345general12345"
         var memoMensaje = ""
